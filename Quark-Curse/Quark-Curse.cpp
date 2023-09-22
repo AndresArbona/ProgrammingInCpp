@@ -52,8 +52,8 @@ int main(int argc, char* argv[])
 
     return  0;
 }
-/*
-//Exercise 3: suma y promedio
+*/
+//Exercise 3: addition and average
 /*
 int main(int argc, char* argv[])
 {
@@ -72,7 +72,7 @@ int main(int argc, char* argv[])
     average = plus/4;
     cout << "The result of adding the four them is: " << plus << "\n";
 
-    cout << "The average is " << average;
+    cout << "The average of that addition divided by four is " << average << endl;
 
     return 0;
 }
@@ -83,9 +83,11 @@ int main(int argc, char* argv[])
 {
     float Item, Amount, Const;
 
+    cout << "Loading market..." << endl;
+
     cout << "Load the cost of the product: ";
     cin>>Item;
-    cout << "How many products is they buying?: ";
+    cout << "How many products are buying?: ";
     cin>>Amount;
 
     Const = Item * Amount;
@@ -2893,25 +2895,25 @@ int main()
     GenericListTest->InsertFirst(89);
     GenericListTest->Print();
 
-    cout << "Insertamos un nodo al final:\n";
+    cout << "Load a value in the end:\n";
     GenericListTest->InsertLast(160);
     GenericListTest->Print();
-    cout << "Insertamos un nodo en la segunda posición:\n";
+    cout << "Load a value in the second position:\n";
     GenericListTest->InsertSecond(13);
     GenericListTest->Print();
-    cout << "Insertamos un nodo en la anteultima posición:\n";
+    cout << "Load a value in the last before position:\n";
     GenericListTest->InserLastBefore(600);
     GenericListTest->Print();
-    cout << "Borramos el primer nodo de la lista:\n";
+    cout << "Deleting the first node:\n";
     GenericListTest->DeleteFirst();
     GenericListTest->Print();
-    cout << "Borramos el segundo nodo de la lista:\n";
+    cout << "Deleting the second node:\n";
     GenericListTest->DeleteSecond();
     GenericListTest->Print();
-    cout << "Borramos el ultimo nodo de la lista:\n";
+    cout << "Deleting the last node:\n";
     GenericListTest->DeleteLast();
     GenericListTest->Print();
-    cout << "Borramos el mayor de la lista:\n";
+    cout << "Deleting the largest node in the list:\n";
     GenericListTest->DeleteLargest();
     GenericListTest->Print();
     return 0;
@@ -3311,12 +3313,14 @@ int main()
 /*
 class BinaryTree {
 private:
+
     class Node {
     public:
         int NodeValue;
         Node *LeftBranch;
         Node *RightBranch;
     };
+
     Node *Root;
     int Stack;
     int Height;
@@ -3370,7 +3374,7 @@ void BinaryTree::Insert(int NewValue)
         NewNode->RightBranch = NULL;
         if (Root == NULL)
             Root = NewNode;
-        else
+        if(Root != NULL)
         {
             Node *LastNode, *TraverseNode;
             LastNode = NULL;
@@ -3900,7 +3904,7 @@ class Temperature {
     int LowerTemperature, MaxTemperature;
 public:
     Temperature(int NewLowerTemperature,int NewMaxTemperature,int MediaTemperature);
-    void imprimir();
+    void Print();
 };
 
 Temperature::Temperature(int NewLowerTemperature,int NewMaxTemperature,int MediaTemperature):Media(MediaTemperature)
@@ -3909,7 +3913,7 @@ Temperature::Temperature(int NewLowerTemperature,int NewMaxTemperature,int Media
     MaxTemperature=NewMaxTemperature;
 }
 
-void Temperature::imprimir()
+void Temperature::Print()
 {
     cout <<LowerTemperature <<" " <<MaxTemperature <<" " << Media << "\n";
 }
@@ -3917,10 +3921,10 @@ void Temperature::imprimir()
 int main()
 {
     Temperature Temperature1Test(10,20,14);
-    Temperature1Test.imprimir();
+    Temperature1Test.Print();
 
     Temperature Temperature2Test(5,9,7);
-    Temperature2Test.imprimir();
+    Temperature2Test.Print();
     return 0;
 }
 */
